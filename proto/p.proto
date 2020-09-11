@@ -1,0 +1,14 @@
+syntax = "proto3";
+package metricspb;
+option go_package="grpcDisco/proto";
+
+import "google/protobuf/empty.proto";
+
+message TestResponse {
+	int64 Port = 1;
+}
+
+service Test {
+	rpc GetFeature(google.protobuf.Empty) returns (TestResponse);
+
+}
